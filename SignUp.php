@@ -30,7 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if (mysqli_query($conn, $sql)) {
             echo "<script type='text/javascript'> alert('Registration successful!'); </script>";
-            
+            echo "<script>window.location.href='Login.php';</script>";
+exit;
         } else {
             echo "Error: " . mysqli_error($conn);
         }
